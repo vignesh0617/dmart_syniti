@@ -1,0 +1,13 @@
+secret_key = my_super_secret_key
+algorithm = HS256
+host = localhost
+database_name = cidm_final
+username = root
+password = root
+session_time_in_secs = 1300
+
+home_page_link = /home
+login_page_link = /login
+logout_page_link = /logout
+
+milestone_reporting_table_id = milestone_reporting_table

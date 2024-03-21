@@ -1,0 +1,21 @@
+.chart_container{
+    display: flex;
+    flex: 1;
+   
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+/* .g1,.g2,.g3,.g4{
+    height: 20vh;
+    width: 20vw;
+} */
+
+
+#gauge_chart_1,#gauge_chart_2,#gauge_chart_3,#number_chart{
+    height: 35vh;
+    width: 23vw;
+    border-radius: 2vh;
+}
