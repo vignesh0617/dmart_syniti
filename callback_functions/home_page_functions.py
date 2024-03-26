@@ -69,7 +69,7 @@ def create_gauge_chart(title : str, actual_value :int , total_value : int) -> go
     )
     
     gauge_chart.add_annotation(
-                    x= 0.5, y=0.2,
+                    x= 0.5, y=0.1,
                     text=f"{percentage:.2f}%",
                     showarrow=False,
                     font={'size': 15}
@@ -77,7 +77,7 @@ def create_gauge_chart(title : str, actual_value :int , total_value : int) -> go
     
     gauge_chart.update_layout(
         margin=dict(b=1,l=25,r=45,t=70),
-        title = {"x" : 0.06 , "y" : 0.9 , "text" : title , "font.size" : 13}
+        title = {"x" : 0.02 , "y" : 0.95 , "text" : title , "font.size" : 13}
     )
     
     return gauge_chart
@@ -97,22 +97,15 @@ def update_output(pathname):
     gauge1 = create_gauge_chart("Target Design % Complete", 1557, 2218) 
     gauge2 = create_gauge_chart("Field Mapping % Complete", 1435, 2335) 
     gauge3 = create_gauge_chart("Rule Build % Complete", 1314, 2335)
-    gauge1 = create_gauge_chart("Target Design % Complete", 1557, 2218) 
-    gauge2 = create_gauge_chart("Field Mapping % Complete", 1435, 2335) 
-    gauge3 = create_gauge_chart("Rule Build % Complete", 1314, 2335)
 
     numberchart = go.Figure(go.Indicator(
     mode = "number",
     value = 55,
-    title = {
-        'text': "Number of Objects",
-        'font.size' : 15,
-        },
     domain = {'x': [0, 1], 'y': [0, 1]})) 
     
     numberchart.update_layout(
-        margin=dict(b=1,l=25,r=45,t=70),
-        title = {"x" : 0.06 , "y" : 0.9 , "text" : title , "font.size" : 13}
+        margin=dict(b=20,l=25,r=25,t=50),
+        title = {"x" : 0.02 , "y" : 0.95 , "text" : "Number of Objects" , "font.size" : 13}
     )
 
     
